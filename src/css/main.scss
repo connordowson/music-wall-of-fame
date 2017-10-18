@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    font-family: Raleway;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+body{
+    background: #790133;    
+}
+#container{
+}
+
+#albums-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    img{
+        padding: 20px;
+    }
+
+}

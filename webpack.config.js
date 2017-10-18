@@ -1,4 +1,5 @@
 var path = require('path');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 var webpack = require('webpack');
 
 
@@ -12,6 +13,10 @@ module.exports = {
         filename: 'bundle.js'
 
     },
+
+    node: {
+        fs: "empty"
+      },
 
     module: {
 
@@ -56,25 +61,6 @@ module.exports = {
 
             },
 
-            // {
-
-            //     test: /\.(png|jpeg|svg)$/,
-
-            //     use: {
-
-            //         loader: "url-loader",
-
-            //         options: {
-
-            //             name: "./assets/[name].[ext]",
-            //             limit: 30000
-
-            //         }
-
-            //     }
-
-            // }
-
             {
                 test: /\.(gif|png|jpe?g)$/i,
 
@@ -89,7 +75,7 @@ module.exports = {
                     }
                 }
 
-            },
+            }
 
         ]
     },
@@ -102,6 +88,16 @@ module.exports = {
             "node_modules"
         ]
 
-    }
+    },
 
-}
+    plugins: [
+
+        new CopyWebpackPlugin([
+
+            {from: "./src/assets/", to: "./assets/"}
+
+        ])
+
+    ]
+
+};

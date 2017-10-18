@@ -3,9 +3,10 @@ import ReactDOM from "react-dom"
 
 import Home from "Home.js"
 
+
 ReactDOM.render(
 
-    <Home albums={albums}/>,
+    <Home />,
 
     document.getElementById("app")
 
