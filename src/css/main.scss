@@ -4,14 +4,22 @@
 }
 
 h1{
-    font-family: Raleway;
+    font-family: Montserrat,sans-serif;
+    font-size: 3em;
     padding: 20px;
     text-align: center;
     color: white;
+
+    @media screen and (max-width: 350px){
+        font-size: 2em;
+    }
 }
 
 body{
-    background: #790133;    
+    min-height: 100vh;
+    background: linear-gradient(#31102e,#790133,#e15a44,#f9f9f9);
+    background-attachment: fixed;
+    
 }
 #container{
 }
@@ -22,7 +30,21 @@ body{
     flex-wrap: wrap;
 
     img{
-        padding: 20px;
+        border-radius: 2px;
+        margin: 20px;
+
+        @media screen and (max-width: 500px){
+            height: 150px;      
+        }
+
+        @media screen and (max-width: 400px){
+            height: 130px;      
+        }
+
+        @media screen and (max-width: 350px){
+            height: 110px;      
+        }
+
     }
 
 }

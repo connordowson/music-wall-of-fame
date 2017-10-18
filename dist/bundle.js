@@ -29362,7 +29362,13 @@ var Albums = function (_React$Component2) {
         value: function render() {
 
             var listAlbums = _albums2.default.map(function (albumCover, index) {
-                return _react2.default.createElement("img", { height: "200px", src: "./assets/albums/" + albumCover + ".jpg" });
+                return _react2.default.createElement(
+                    "a",
+                    { href: "https://discogs.com/release/" + albumCover, target: "_blank" },
+                    " ",
+                    _react2.default.createElement("img", { height: "175px", src: "./assets/albums/" + albumCover + ".jpg" }),
+                    " "
+                );
             });
 
             return _react2.default.createElement(
@@ -29415,7 +29421,7 @@ var Album = function (_React$Component3) {
 Object.defineProperty(exports, "__esModule", {
         value: true
 });
-var albums = [378017, 9938340, 6784584, 3671359, 3734425, 6223717, 612972, 3267383, 4608810];
+var albums = [378017, 9938340, 6784584, 3671359, 3734425, 6223717, 9464172, 3267383, 4608810, 3925637, 2287669, 2560651, 10445500, 3976200, 241801, 9117670, 3640707, 8661360, 4570505, 4325263, 2942297, 6040645];
 
 exports.default = albums;
 
@@ -29459,7 +29465,7 @@ exports = module.exports = __webpack_require__(217)(undefined);
 
 
 // module
-exports.push([module.i, "* {\n  padding: 0;\n  margin: 0; }\n\nh1 {\n  font-family: Raleway;\n  padding: 20px;\n  text-align: center; }\n\n#albums-container {\n  display: flex;\n  justify-content: space-around;\n  flex-wrap: wrap; }\n  #albums-container img {\n    padding: 20px; }\n", ""]);
+exports.push([module.i, "* {\n  padding: 0;\n  margin: 0; }\n\nh1 {\n  font-family: Montserrat,sans-serif;\n  font-size: 3em;\n  padding: 20px;\n  text-align: center;\n  color: white; }\n  @media screen and (max-width: 350px) {\n    h1 {\n      font-size: 2em; } }\n\nbody {\n  min-height: 100vh;\n  background: linear-gradient(#31102e, #790133, #e15a44, #f9f9f9);\n  background-attachment: fixed; }\n\n#albums-container {\n  display: flex;\n  justify-content: space-around;\n  flex-wrap: wrap; }\n  #albums-container img {\n    border-radius: 2px;\n    margin: 20px; }\n    @media screen and (max-width: 500px) {\n      #albums-container img {\n        height: 150px; } }\n    @media screen and (max-width: 400px) {\n      #albums-container img {\n        height: 130px; } }\n    @media screen and (max-width: 350px) {\n      #albums-container img {\n        height: 110px; } }\n", ""]);
 
 // exports
 
